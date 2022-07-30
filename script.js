@@ -1,6 +1,7 @@
 const video = document.getElementById('video');
 let emotion = '';
 const validEmotions = ['angry', 'disgusted', 'fearful', 'happy', 'neutral', 'sad', 'surprised'];
+
     
     
 Promise.all([
@@ -37,11 +38,33 @@ video.addEventListener('playing', () => {
         emotion = key;
       }
     });
+    const head1 = document.getElementById("heading-1");
+    head1.classList.add('hide-content');
+    const head2 = document.getElementById("heading-2");
+    head2.classList.remove('hide-content');
+    
       if (validEmotions.includes(emotion)) {
         if (emotion === 'neutral') {
-           window.open('')
-        } else {
-            window.open(`${window.location.href}/Home`);
+          window.location.href = "https://open.spotify.com/playlist/6IdR78TOog83PV4XhLDvWN";
+          
+        } else if (emotion === 'happy') {
+          window.location.href = "https://open.spotify.com/playlist/0jrlHA5UmxRxJjoykf7qRY";
+
+        } else if (emotion === 'sad') {
+          window.location.href = "https://open.spotify.com/playlist/0uQUuQSxkO3tylUSOKnyEB";
+
+        } else if (emotion === 'angry') {
+          window.location.href = "https://open.spotify.com/playlist/2arRA0sbEqLa09tzEb2qOp";
+
+        } else if (emotion === 'fearful') {
+          window.location.href = "https://open.spotify.com/playlist/17QX67R2HbfdVBT7TXKi6A";
+
+        } else if (emotion === 'disgusted') {
+          window.location.href = "https://open.spotify.com/playlist/17QX67R2HbfdVBT7TXKi6A"
+
+        } else if (emotion === 'surprised') {
+          window.location.href = "https://open.spotify.com/playlist/6IdR78TOog83PV4XhLDvWN";
+
         }
         clearInterval(interval);
         canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);

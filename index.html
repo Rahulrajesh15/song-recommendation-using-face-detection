@@ -5,26 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="/style.css">
   <script defer src="face-api.min.js"></script>
   <script defer src="script.js"></script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
 
-    canvas {
-      position: absolute;
-    }
-  </style>
 </head>
 <body>
+  <div>
+  <h1 id="heading-1">Scanning, please wait...</h1>
+  <h1 id="heading-2" class="hide-content">Scanning completed getting the songs...</h1>
+  <div>
   <video id="video" width="720" height="560" autoplay muted></video>
-  <div id="root"></div>
 </body>
 </html>
